@@ -239,5 +239,11 @@ int mPiecesInitialLocation [7 /* Types */][4 /* Rotations */][2 /* Position */] 
         {-2, -2},
         {-2, -3}
     },
-    
+    //L-shape
+    {
+        {-2, -3},
+        {-2, -3},
+        {-2, -3},
+        {-2, -2}
+    },
 };
