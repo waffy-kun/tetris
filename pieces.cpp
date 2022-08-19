@@ -222,3 +222,14 @@ char mPieces[7 /* types */]
                     }
                 }
             };
+
+//Relocation of piece to initial position when newly created and drawn to the board
+int mPiecesInitialLocation [7 /* Types */][4 /* Rotations */][2 /* Position */] = {
+    //Square
+    {
+        {-2, -3},
+        {-2, -3},
+        {-2, -3},
+        {-2, -3}
+    },
+};
