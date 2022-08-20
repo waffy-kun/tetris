@@ -306,3 +306,16 @@ int Pieces::getXInitialPosition(int pPiece, int pRotation) {
     return mPiecesInitialLocation[pPiece][pRotation][0];
 };
 
+/*
+========================================================
+Returns vertical displacement of piece needed to draw it in correct position
+
+Parameters:
+>pPiece: Piece to draw
+>pRotation: 1 of 4 possible rotations
+=========================================================
+*/
+
+int Pieces::getYInitialPosition(int pPiece, int pRotation) {
+    return mPiecesInitialLocation[pPiece][pRotation][1];
+};
