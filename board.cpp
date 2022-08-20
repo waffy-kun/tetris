@@ -66,3 +66,20 @@ bool Board::isGameOver() {
     }
     return false;
 }
+
+/*
+=======================
+Delete a line by moving upper adjacent line down
+
+Parameter:
+>pY: Vertical position in blocks of line for deletion
+=======================
+*/
+void Board::deleteLine(int pY) {
+    //Moves all upper adjacent lines one row down
+    for (int j = pY; j > 0; j--) {
+        for (int i = 0; i < BOARD_WIDTH; i++) {
+            mBoard[i][j] = mBoard[i][j-1];
+        }
+    }
+}
