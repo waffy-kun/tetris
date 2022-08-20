@@ -275,3 +275,20 @@ int mPiecesInitialLocation [7 /* Types */][4 /* Rotations */][2 /* Position */] 
         {-2, -2}
     }
 };
+
+/*
+=======================================================
+Returns type of block (0 = no block, 1 = normal block, 2 = pivot block)
+
+Parameters:
+>pPiece: Piece to draw
+>pRotation: 1 of 4 possible rotations
+>pX: Horizontal position in blocks
+>pY: Vertical Position in blocks
+========================================================
+*/
+
+int Pieces::getBlockType(int pPiece, int pRotation, int pX, int pY) {
+    return mPieces[pPiece][pRotation][pX][pY];
+};
+
