@@ -5,8 +5,7 @@
 #include "pieces.h"
 
 //--DEFINES--
-
-#define BOARD_LINE_WIDTH 6 //WIDTH OF EACH TWO LINES WHICH DELIMIT BOARD
+#define BOARD_LINE_WIDTH 6 //Width of each two lines that delimit board
 #define BLOCK_SIZE 16 //Width and Height of each block piece
 #define BOARD_POSITION 320 //Center position from the leftmost part of screen
 #define BOARD_WIDTH 10 //Board Width in Blocks
