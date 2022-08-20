@@ -287,7 +287,6 @@ Parameters:
 >pY: Vertical Position in blocks
 ========================================================
 */
-
 int Pieces::getBlockType(int pPiece, int pRotation, int pX, int pY) {
     return mPieces[pPiece][pRotation][pX][pY];
 };
@@ -301,7 +300,6 @@ Parameters:
 >pRotation: 1 of 4 possible rotations
 ========================================================
 */
-
 int Pieces::getXInitialPosition(int pPiece, int pRotation) {
     return mPiecesInitialLocation[pPiece][pRotation][0];
 };
@@ -315,7 +313,6 @@ Parameters:
 >pRotation: 1 of 4 possible rotations
 =========================================================
 */
-
 int Pieces::getYInitialPosition(int pPiece, int pRotation) {
     return mPiecesInitialLocation[pPiece][pRotation][1];
 };
