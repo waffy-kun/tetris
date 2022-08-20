@@ -15,4 +15,19 @@
 #define MIN_HORIZONTAL_MARGIN 20 //Minimum horizontal margin for board limit
 #define PIECE_BLOCKS 5 //Number of horizontal and vertical blocks of matrix piece
 
+class Board {
+    public:
+    Board (Pieces *pPieces, int pScreenHeight);
+
+    int getXPosInPixels (int pPos);
+    int getYPosInPixels (int pPos);
+    bool isFreeBlock (int pX, int pY);
+    bool isPossibleMove (int pX, int pY, int pPiece, int pRotation);
+    void storePiece (int pX, int pY, int pPiece, int pRotation);
+    void deletePossibleLines();
+    bool isGameOver();
+
+    
+};
+
 #endif // _BOARD_
