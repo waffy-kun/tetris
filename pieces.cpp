@@ -292,3 +292,17 @@ int Pieces::getBlockType(int pPiece, int pRotation, int pX, int pY) {
     return mPieces[pPiece][pRotation][pX][pY];
 };
 
+/*
+=======================================================
+Returns horizontal displacement of piece needed to draw it in correct position
+
+Parameters:
+>pPiece: Piece to draw
+>pRotation: 1 of 4 possible rotations
+========================================================
+*/
+
+int Pieces::getXInitialPosition(int pPiece, int pRotation) {
+    return mPiecesInitialLocation[pPiece][pRotation][0];
+};
+
