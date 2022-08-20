@@ -27,7 +27,17 @@ class Board {
     void deletePossibleLines();
     bool isGameOver();
 
-    
+    private:
+    //POS_FREE = empty position in the board
+    //POS_FILLED = filled position in the board
+    enum {POS_FREE, POS_FILLED};
+
+    int mBoard [BOARD_WIDTH][BOARD_HEIGHT]; //Board which contains the pieces
+    Pieces *mPieces;
+    int mScreenHeight;
+
+    void initBoard();
+    void deleteLine(int pY);
 };
 
 #endif // _BOARD_
