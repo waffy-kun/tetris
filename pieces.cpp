@@ -1,4 +1,4 @@
-#include <iostream>
+#include "pieces.h"
 
 char mPieces[7 /* types */]
             [4 /* rotations */]
