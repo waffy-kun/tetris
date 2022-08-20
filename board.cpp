@@ -5,7 +5,6 @@
 Init
 =====================
 */
-
 Board::Board (Pieces *pPieces, int pScreenHeight) {
     //Get Screen Height
     mScreenHeight = pScreenHeight;
@@ -22,7 +21,6 @@ Board::Board (Pieces *pPieces, int pScreenHeight) {
 Initialize the board blocks with free positions
 =====================
 */
-
 void Board::initBoard() {
     for (int i = 0; i < BOARD_WIDTH; i++){
         for (int j = 0; j < BOARD_HEIGHT; j++) {
@@ -43,7 +41,6 @@ Parameters:
 >pRotation: 1 of 4 possible rotations
 ======================
 */
-
 void Board::storePiece(int pX, int pY, int pPiece, int pRotation) {
     //Store each piece of the block in the board
     for (int i1 = pX, i2 = 0; i1 < pX + PIECE_BLOCKS; i1++, i2++) {
@@ -54,4 +51,18 @@ void Board::storePiece(int pX, int pY, int pPiece, int pRotation) {
             }
         }
     }
+}
+
+/*
+=======================
+Check if game is over after piece exceeded uppermost position
+Returns True or False
+=======================
+*/
+bool Board::isGameOver() {
+    //If the first line is has blocks, end game.
+    for (int i = 0; i < BOARD_WIDTH; i++) {
+        if (mBoard[i][0] == POS_FILLED) return true;
+    }
+    return false;
 }
