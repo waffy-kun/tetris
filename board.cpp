@@ -125,3 +125,15 @@ Parameters:
 int Board::getXPosInPixels(int pPos) {
     return ((BOARD_POSITION-(BLOCK_SIZE * (BOARD_WIDTH / 2))) + (pPos * BLOCK_SIZE));
 }
+
+/*
+=========================
+Returns vertical position in pixels of the block
+
+Parameters:
+>pPos: Horizontal position of the block in the board
+=========================
+*/
+int Board::getYPosInPixels(int pPos) {
+    return ((mScreenHeight - (BLOCK_SIZE * BOARD_HEIGHT)) + (pPos * BLOCK_SIZE));
+}
