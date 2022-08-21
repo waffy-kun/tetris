@@ -99,3 +99,17 @@ void Board::deletePossibleLines() {
         if (i == BOARD_WIDTH) deleteLine(j);
     }
 }
+
+/*
+========================
+Returns true if a block in the board is empty, false if filled.
+
+Parameters:
+
+>pX: Horizontal position in blocks
+>pY: Vertical position in blocks
+========================
+*/
+bool Board::isFreeBlock(int pX, int pY) {
+    return (mBoard[pX][pY] == POS_FILLED);
+}
