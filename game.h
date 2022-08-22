@@ -10,4 +10,22 @@
 // ----- DEFINES -----
 #define WAIT_TIME 700 // Number of milliseconds before piece go 1 block down
 
-#endif
+//---------------------
+// Game
+//---------------------
+
+class Game {
+    public:
+
+    Game (Board *pBoard, Pieces *pPieces, IO *pIO, int pScreenHeight);
+
+    void drawScene();
+    void createNewPiece();
+
+    int mPosX, mPosY; // Position of piece falling down
+    int mPiece, mRotation; // Type and rotation of piece falling down
+
+
+};
+
+#endif // _GAME_
