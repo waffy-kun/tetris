@@ -25,7 +25,20 @@ class Game {
     int mPosX, mPosY; // Position of piece falling down
     int mPiece, mRotation; // Type and rotation of piece falling down
 
+    private:
 
+    int mScreenHeight; // Screen height in pixels
+    int mNextPosX, mNextPosY; // Position of the next piece
+    int mNextPiece, mNextRotation; // Type and rotation of next piece
+
+    Board *mBoard;
+    Pieces *mPiece;
+    IO *mIO;
+
+    int getRand(int pA, int pB);
+    void initGame();
+    void drawPiece(int pX, int pY, int pPiece, int pRotation);
+    void drawBoard();
 };
 
 #endif // _GAME_
