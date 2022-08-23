@@ -32,7 +32,7 @@ class Game {
     int mNextPiece, mNextRotation; // Type and rotation of next piece
 
     Board *mBoard;
-    Pieces *mPiece;
+    Pieces *mPieces;
     IO *mIO;
 
     int getRand(int pA, int pB);
