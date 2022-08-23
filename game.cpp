@@ -20,3 +20,16 @@ Game::Game (Board *pBoard, Pieces *pPieces, IO *pIO, int pScreenHeight) {
     //Game Initialization
     initGame();
 }
+
+/*
+=========================
+Get a random int between two integers
+
+Parameters:
+>pA: First number
+>pB: Second number
+=========================
+*/
+int Game::getRand (int pA, int pB) {
+    return rand() % (pB - pA + 1) + pB;
+}
