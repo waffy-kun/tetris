@@ -49,5 +49,9 @@ void Game::initGame() {
     mPosX =     (BOARD_WIDTH / 2) + mPieces -> getXInitialPosition (mPiece, mRotation);
     mPosY =     mPieces -> getYInitialPosition (mPiece, mRotation);
 
-
+    // Next Piece
+    mNextPiece =    getRand(0, 6);
+    mNextRotation = getRand(0, 3);
+    mNextPosX =     BOARD_WIDTH + 5;
+    mNextPosY =     5;
 }
