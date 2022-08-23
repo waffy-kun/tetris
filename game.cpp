@@ -55,3 +55,21 @@ void Game::initGame() {
     mNextPosX =     BOARD_WIDTH + 5;
     mNextPosY =     5;
 }
+
+/*
+===========================
+Create a random piece after initialization
+===========================
+*/
+void Game::createNewPiece() {
+
+    // The new piece
+    mPiece =    mNextPiece;
+    mRotation = mNextRotation;
+    mPosX =     (BOARD_WIDTH / 2) + mPieces -> getXInitialPosition (mPiece, mRotation);
+    mPosY =     mPieces -> getYInitialPosition (mPiece, mRotation);
+
+    // Random next piece
+    mNextPiece =    getRand(0, 6);
+    mNextRotation = getRand(0, 3);
+}
