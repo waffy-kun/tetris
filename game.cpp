@@ -144,3 +144,16 @@ void Game::drawBoard() {
         }
     }
 }
+
+/*
+=========================
+Draw Scene
+
+Draw all the objects of the scene
+=========================
+*/
+void Game::drawScene() {
+    drawBoard(); //Draw the delimitation lines and blocks stored in the board
+    drawPiece(mPosX, mPosY, mPiece, mRotation); //Draw the current piece
+    drawPiece(mNextPosX, mNextPosY, mNextPiece, mNextRotation); //Draw the next piece
+}
