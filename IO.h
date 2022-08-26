@@ -23,6 +23,7 @@ class IO {
     IO();
 
     void drawRectangle(int pX1, int pY1, int pX2, int pY2, enum color pC);
+    void boxColor(SDL_Surface *mScreen, int pX1, int pY1, int pX2, int pY2, Uint32 color);
     void clearScreen();
     int getScreenHeight();
     int initGraph();
