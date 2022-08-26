@@ -96,3 +96,16 @@ int IO::getKey() {
     };
     return event.key.keysym.sym;
 }
+
+/*
+=============================
+Keyboard input contd. further
+=============================
+*/
+int IO::isKeyDown(int pKey) {
+    Uint8* mKeyTable;
+    int mNumKeys;
+    SDL_PumpEvents();
+    mKeyTable = SDL_GetKeyState(&mNumKeys);
+    return mKeyTable[pKey];
+}
