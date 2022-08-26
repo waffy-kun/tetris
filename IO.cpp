@@ -58,3 +58,11 @@ int IO::getScreenHeight() {
     return mScreen -> h;
 }
 
+/*
+============================
+Update screen
+============================
+*/
+void IO::updateScreen() {
+    SDL_Flip (mScreen);
+}
