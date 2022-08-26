@@ -82,3 +82,17 @@ int IO::pollKey() {
     }
 }
 
+/*
+=============================
+Keyboard Input contd.
+=============================
+*/
+int IO::getKey() {
+    SDL_Event event;
+    while (true) {
+        SDL_WaitEvent(&event);
+        if(event.type == SDL_KEYDOWN) break;
+        if(event.type == SDL_QUIT) exit(3);
+    };
+    return event.key.keysym.sym;
+}
