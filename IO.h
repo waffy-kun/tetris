@@ -29,7 +29,7 @@ class IO {
     int initGraph();
     int pollKey();
     int getKey();
-    int isKeyDown();
+    int isKeyDown(int pKey);
     void updateScreen();
 };
 
