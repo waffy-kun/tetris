@@ -66,3 +66,19 @@ Update screen
 void IO::updateScreen() {
     SDL_Flip (mScreen);
 }
+
+/*
+=============================
+Keyboard Input
+=============================
+*/
+int IO::pollKey() {
+    SDL_Event event;
+    while (SDL_PollEvent(&event)) {
+        switch (event.type) {
+            case SDL_KEYDOWN: return event.key.keysym.sym;
+            case SDL_QUIT: exit(3);
+        }
+    }
+}
+
