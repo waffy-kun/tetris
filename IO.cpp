@@ -37,6 +37,15 @@ void IO::clearScreen() {
 
 /*
 ============================
+Draw a rectangle with given color
 
+Parameters:
+> pX1, pY1: Upper left corner of rectangle
+> pX2, pY2: Lower Right corner of rectangle
+> pC: Color of rectangle
 ============================
 */
+void IO::drawRectangle(int pX1, int pY1, int pX2, int pY2, enum color pC) {
+    boxColor(mScreen, pX1, pY1, pX2, pY2 - 1, mColors[pC]);
+}
+
