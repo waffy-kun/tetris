@@ -49,3 +49,12 @@ void IO::drawRectangle(int pX1, int pY1, int pX2, int pY2, enum color pC) {
     boxColor(mScreen, pX1, pY1, pX2, pY2 - 1, mColors[pC]);
 }
 
+/*
+============================
+Return the screen height
+============================
+*/
+int IO::getScreenHeight() {
+    return mScreen -> h;
+}
+
