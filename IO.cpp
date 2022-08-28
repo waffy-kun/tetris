@@ -22,7 +22,7 @@ Method to color
 ============================
 */
 void IO::boxColor(SDL_Surface *mScreen, int pX1, int pY1, int pX2, int pY2, Uint32 color) {
-    SDL_Rect rect{pX1, pY1, pX2 - pX1, pY2 - pY1};
+    SDL_Rect rect{static_cast<Sint16>(pX1), static_cast<Sint16>(pY1), static_cast<Uint16>(pX2 - pX1), static_cast<Uint16>(pY2 - pY1)};
     SDL_FillRect(mScreen, &rect, color);
 }
 
@@ -80,6 +80,7 @@ int IO::pollKey() {
             case SDL_QUIT: exit(3);
         }
     }
+    return -1;
 }
 
 /*
