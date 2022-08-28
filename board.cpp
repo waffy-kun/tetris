@@ -111,7 +111,7 @@ Parameters:
 ========================
 */
 bool Board::isFreeBlock(int pX, int pY) {
-    return (mBoard[pX][pY] == POS_FILLED);
+    return (mBoard[pX][pY] == POS_FREE);
 }
 
 /*
