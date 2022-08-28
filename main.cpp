@@ -60,6 +60,25 @@ int main()
                 mGame.mPosY++;
             break;
             }
+
+            case(SDLK_x): {
+                
+                //Checks collision from top to bottom
+                while (mBoard.isPossibleMove(mGame.mPosX, mGame.mPosY, mGame.mPiece, mGame.mRotation)) {
+                    mGame.mPosY++;
+                }
+
+                mBoard.storePiece (mGame.mPosX, mGame.mPosY - 1, mGame.mPiece, mGame.mRotation);
+                mBoard.deletePossibleLines();
+
+                if (mBoard.isGameOver()) {
+                    mIO.getKey();
+                    exit(0);
+                }
+
+                mGame.createNewPiece();
+                break;
+            }
         }
     }
 }
