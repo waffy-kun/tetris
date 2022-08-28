@@ -86,5 +86,24 @@ int main()
                 break;
             }
         }
+
+        // ----- Vertical Movement -----
+        unsigned long mTime2 = SDL_GetTicks();
+
+        if ((mTime2 - mTime1) > WAIT_TIME) {
+            if (mBoard.isPossibleMove (mGame.mPosX, mGame.mPosY + 1, mGame.mPiece, mGame.mRotation)) {
+                mGame.mPosY++;
+            } else {
+                mBoard.storePiece (mGame.mPosX, mGame.mPosY, mGame.mPiece, mGame.mRotation);
+                mBoard.deletePossibleLines();
+                if (mBoard.isGameOver()) {
+                    mIO.getKey();
+                    exit(0);
+                }
+                mGame.createNewPiece();
+            }
+            mTime1 = SDL_GetTicks();
+        }
     }
+    return 0;
 }
