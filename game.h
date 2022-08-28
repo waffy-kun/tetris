@@ -4,7 +4,7 @@
 // ----- INCLUDES -----
 #include "board.h"
 #include "pieces.h"
-#include "io.h"
+#include "IO.h"
 #include <time.h>
 
 // ----- DEFINES -----
