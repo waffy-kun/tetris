@@ -46,10 +46,13 @@ int main()
             case(SDLK_RIGHT): {
                 if (mBoard.isPossibleMove (mGame.mPosX + 1, mGame.mPosY, mGame.mPiece, mGame.mRotation))
                 mGame.mPosX++;
-                break;
+            break;
             }
 
             case(SDLK_LEFT): {
+                if (mBoard.isPossibleMove (mGame.mPosX - 1, mGame.mPosY, mGame.mPiece, mGame.mPiece))
+                mGame.mPosX--;
+            break;
             }
         }
     }
