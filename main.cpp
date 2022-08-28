@@ -31,4 +31,26 @@ int main()
     // Get actual time in milliseconds (SDL)
     unsigned long mTime1 = SDL_GetTicks();
     
+    // ----- Main Loop -----
+    while (!mIO.isKeyDown (SDLK_ESCAPE)) {
+
+        // ----- Draw -----
+        mIO.clearScreen();
+        mGame.drawScene();
+        mIO.updateScreen();
+
+        // ----- Input -----
+        int mKey = mIO.pollKey();
+        
+        switch (mKey) {
+            case(SDLK_RIGHT): {
+                if (mBoard.isPossibleMove (mGame.mPosX + 1, mGame.mPosY, mGame.mPiece, mGame.mRotation))
+                mGame.mPosX++;
+                break;
+            }
+
+            case(SDLK_LEFT): {
+            }
+        }
+    }
 }
