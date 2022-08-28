@@ -45,20 +45,20 @@ int main()
         switch (mKey) {
             case(SDLK_RIGHT): {
                 if (mBoard.isPossibleMove (mGame.mPosX + 1, mGame.mPosY, mGame.mPiece, mGame.mRotation))
-                mGame.mPosX++;
-            break;
+                    mGame.mPosX++;
+                break;
             }
 
             case(SDLK_LEFT): {
                 if (mBoard.isPossibleMove (mGame.mPosX - 1, mGame.mPosY, mGame.mPiece, mGame.mRotation))
-                mGame.mPosX--;
-            break;
+                    mGame.mPosX--;
+                break;
             }
 
             case(SDLK_DOWN): {
                 if (mBoard.isPossibleMove (mGame.mPosX, mGame.mPosY + 1, mGame.mPiece, mGame.mRotation))
-                mGame.mPosY++;
-            break;
+                    mGame.mPosY++;
+                break;
             }
 
             case(SDLK_x): {
@@ -77,6 +77,12 @@ int main()
                 }
 
                 mGame.createNewPiece();
+                break;
+            }
+
+            case(SDLK_z): {
+                if (mBoard.isPossibleMove (mGame.mPosX, mGame.mPosY, mGame.mPiece, (mGame.mRotation + 1) % 4))
+                    mGame.mRotation = (mGame.mRotation + 1) % 4;
                 break;
             }
         }
