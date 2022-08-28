@@ -31,7 +31,7 @@ Parameters:
 =========================
 */
 int Game::getRand (int pA, int pB) {
-    return rand() % (pB - pA + 1) + pB;
+    return rand() % (pB - pA + 1) + pA;
 }
 
 /*
@@ -120,7 +120,7 @@ Draw two lines which delimit the board
 void Game::drawBoard() {
     //Calculate the limits of the board in pixels
     int mX1 = BOARD_POSITION - (BLOCK_SIZE * (BOARD_WIDTH / 2)) - 1;
-    int mX2 = BOARD_POSITION - (BLOCK_SIZE * (BOARD_WIDTH / 2));
+    int mX2 = BOARD_POSITION + (BLOCK_SIZE * (BOARD_WIDTH / 2));
     int mY = mScreenHeight - (BLOCK_SIZE * BOARD_HEIGHT);
 
     //Check if vertical margin is not too small
@@ -139,7 +139,9 @@ void Game::drawBoard() {
         for (int j = 0; j < BOARD_HEIGHT; j++) {
             //Check if block is filled then draws it
             if (!mBoard -> isFreeBlock(i, j)) {
-                mIO -> drawRectangle (mX1 + i * BLOCK_SIZE, mY + j * BLOCK_SIZE, (mX1 + i * BLOCK_SIZE) + BLOCK_SIZE - 1, (mY + j * BLOCK_SIZE) + BLOCK_SIZE - 1, RED);
+                mIO -> drawRectangle (mX1 + i * BLOCK_SIZE, mY + j * BLOCK_SIZE,
+                (mX1 + i * BLOCK_SIZE) + BLOCK_SIZE - 1,
+                (mY + j * BLOCK_SIZE) + BLOCK_SIZE - 1, RED);
             }
         }
     }
